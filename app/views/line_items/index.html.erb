@@ -1,0 +1,27 @@
+<h1>Listing lime_items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Cart</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lime_items.each do |lime_item| %>
+      <tr>
+        <td><%= lime_item.product %></td>
+        <td><%= lime_item.cart %></td>
+        <td><%= link_to 'Show', lime_item %></td>
+        <td><%= link_to 'Edit', edit_lime_item_path(lime_item) %></td>
+        <td><%= link_to 'Destroy', lime_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lime item', new_lime_item_path %>

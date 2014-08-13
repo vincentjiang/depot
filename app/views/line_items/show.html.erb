@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @lime_item.product %>
+</p>
+
+<p>
+  <strong>Cart:</strong>
+  <%= @lime_item.cart %>
+</p>
+
+<%= link_to 'Edit', edit_lime_item_path(@lime_item) %> |
+<%= link_to 'Back', lime_items_path %>
